@@ -1,25 +1,29 @@
-init:("I"$) each "," vs (read0 `:2.txt)[0]
-tape:init 
-seq:til (count init)
-comb:seq cross seq
-output:19690720
+/ 2.q
+/ Advent of Code 2019
+/ Public domain as declared by Sturm Mabie
 
-/ run the intstruction at address x
-step:{op:tape[x]; arg1:tape[x+1]; arg2:tape[x+2]; dst:tape[x+3];
- if[op=99; :-1]; if[x=-1; :-1];
- tape[dst]:$[op=1; +; *][tape[arg1]; tape[arg2]];
+init:("I"$) each "," vs (read0 `:2.txt)[0] / instruction data
+output:19690720 / magic number to find for part 2 
+tape:0#0 
+seq:til count init
+comb:seq cross seq
+
+/ run the instruction at address x
+step:{if[x=-1; :-1];
+ if[99=op:tape[x]; :-1];
+ src1:tape[x+1]; src2:tape[x+2]; dst:tape[x+3];
+ tape[dst]:$[op=1; +; *][tape[src1]; tape[src2]];
  x+4}
 
 / run the machine until we converge on -1, resetting the tape each run
 run:{[xs]
- tape[1]:xs[0];
- tape[2]:xs[1];
+ tape::init;
+ tape[1]:xs[0]; tape[2]:xs[1];
  step scan 0;
  ret:tape[0];
- tape::init;
  ret}
 
-/ find the noun and verb that produces output
+/ find the noun and verb that produces output and compute the magic number
 find:{nv:comb[(run each comb)?output];
  noun:nv[0]; verb:nv[1];
  verb+100*noun}
