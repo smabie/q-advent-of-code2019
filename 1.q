@@ -11,3 +11,4 @@ rec_fuel:(-2 _) each (fuel scan) each fuel_list / remove last two values
 " " sv ("Part 2:"; string sum sum each rec_fuel)
 
 exit 0
+get rid of last two negative fuel values
