@@ -16,7 +16,7 @@ expand:{sums (0N; 2)#raze over section each x}
 manhattan_distance:{min sum flip (inter/) expand each x}
 
 / find closest intersection using sum of wire length
-locs:{w:expand each x; 2+min sum w?\:((inter/) w)}
+locs:{2+min sum w?\:((inter/) w:expand each x)}
 
 " " sv ("Part 1:"; string manhattan_distance wires)
 " " sv ("Part 2:"; string locs wires)
