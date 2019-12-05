@@ -6,9 +6,9 @@
 wires:{"," vs x} each read0 `:3.txt / wire spec
 
 / generate a list of coordinates
-section:{dir:x[0]; len:"J"$(1 _ x);
- coord:$[dir="R"; (1; 0); dir="L"; (-1; 0); dir="U"; (0; 1); (0; -1)];
- (0N; 2)#(2*len)#coord};
+section:{len:"J"$(1 _ x);
+ basis:$["R"=dir:x[0]; (1; 0); dir="L"; (-1; 0); dir="U"; (0; 1); (0; -1)];
+ (0N; 2)#(2*len)#basis}
 
 / generate wire paths
 expand:{sums (0N; 2)#raze over section each x}
