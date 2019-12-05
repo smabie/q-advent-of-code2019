@@ -1,6 +1,7 @@
 / 3.q
 / Advent of Code 2019
 / Public domain as declared by Sturm Mabie
+\l 0.q
 
 wires:{"," vs x} each read0 `:3.txt / wire spec
 
@@ -18,7 +19,7 @@ manhattan_distance:{min sum flip (inter/) expand each x}
 / find closest intersection using sum of wire length
 locs:{2+min sum w?\:((inter/) w:expand each x)}
 
-" " sv ("Part 1:"; string manhattan_distance wires)
-" " sv ("Part 2:"; string locs wires)
+part1 manhattan_distance wires
+part2 locs wires
 
 exit 0

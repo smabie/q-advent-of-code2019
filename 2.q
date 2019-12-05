@@ -1,6 +1,7 @@
 / 2.q
 / Advent of Code 2019
 / Public domain as declared by Sturm Mabie
+\l 0.q
 
 init:("I"$) each "," vs (read0 `:2.txt)[0] / instruction data
 output:19690720 / magic number to find for part 2 
@@ -28,8 +29,8 @@ find:{nv:comb[(run each comb)?output];
  noun:nv[0]; verb:nv[1];
  verb+100*noun}
 
-" " sv ("Part 1:"; string run (12; 2))
-" " sv ("Part 2:"; string find[])
+part1 run (12; 2)
+part2 find[]
 
 exit 0
 
