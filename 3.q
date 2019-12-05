@@ -14,7 +14,7 @@ section:{len:"J"$(1 _ x);
 expand:{sums (0N; 2)#raze over section each x}
 
 / find closest intersection using manhattan distance
-manhattan_distance:{min sum flip (inter/) expand each x}
+manhattan_distance:{min sum abs flip (inter/) expand each x}
 
 / find closest intersection using sum of wire length
 locs:{2+min sum w?\:((inter/) w:expand each x)}
@@ -22,4 +22,4 @@ locs:{2+min sum w?\:((inter/) w:expand each x)}
 part1 manhattan_distance wires
 part2 locs wires
 
-exit 0
+/exit 0
