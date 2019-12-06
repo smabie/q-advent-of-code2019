@@ -24,7 +24,7 @@ adjacent:{0<sum 1<cont_count x}
 only_two:{(count cnt)<>(cnt:cont_count x)?2}
 
 valid:{(increasing each x) and (adjacent each x)}
-valid2:{(only_two each x) and valid x}
+valid2:{(only_two each x) and y}
 
-part1 sum valid nums
-part2 sum valid2 nums
+part1 sum v:valid nums
+part2 sum valid2[nums;v]
