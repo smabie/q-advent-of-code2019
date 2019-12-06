@@ -22,4 +22,4 @@ locs:{2+min sum w?\:((inter/) w:expand each x)}
 part1 manhattan_distance wires
 part2 locs wires
 
-/exit 0
+exit 0
