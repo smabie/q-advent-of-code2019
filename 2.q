@@ -25,10 +25,8 @@ run:{[xs]
  ret}
 
 / find the noun and verb that produces output and compute the magic number
-find:{nv:comb[(run each comb)?output];
- noun:nv[0]; verb:nv[1];
- verb+100*noun}
-
+find:{sum (100; 1)*comb[(run each comb)?output]}
+ 
 part1 run (12; 2)
 part2 find[]
 
