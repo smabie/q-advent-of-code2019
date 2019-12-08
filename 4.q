@@ -1,10 +1,9 @@
 / 4.q
 / Advent of Code 2019
 / Public domain as declared by Sturm Mabie
-
-/ password is between these two numbers
 \l 0.q
 
+/ password is between these two numbers
 low_end:206938
 high_end:679128
 range:flip {10 vs x} low_end+til 1+high_end-low_end

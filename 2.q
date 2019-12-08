@@ -3,7 +3,7 @@
 / Public domain as declared by Sturm Mabie
 \l 0.q
 
-init:("I"$) each "," vs (read0 `:2.txt)[0] / instruction data
+init:("J"$) each "," vs (read0 `:2.txt)[0] / instruction data
 output:19690720 / magic number to find for part 2 
 tape:0#0 
 seq:til count init
