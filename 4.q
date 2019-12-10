@@ -12,10 +12,9 @@ range:flip {10 vs x} low_end+til 1+high_end-low_end
 cont_count:{count each (where differ x) cut x}
 
 / return boolean if number is strictly increasing
-increasing:{"b"${$[x=0b; 0b; x<=y; y; 0b]} over x}
+increasing:{x~asc x}
 
 / return boolean if number has atleast one double digit
-/ we have to use -1 since 1b=1
 adjacent:{0<sum 1<cont_count x}
 
 / only one double digit
