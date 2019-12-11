@@ -3,8 +3,6 @@
 / Public domain as declared by Sturm Mabie
 \l 0.q
 
-/map:(("S"$) each ) (")" vs) each "," vs "COM)B,B)C,C)D,D)E,E)F,B)G,G)H,D)I,E)J,J)K,K)L,K)YOU,I)SAN"
-
 map:(("S"$) each) each (")" vs) each read0 `:6.txt
 dict:syms!count[syms:distinct raze map]#();
 {dict[x[0]]:x[1],dict[x[0]]} each map; / build tree
