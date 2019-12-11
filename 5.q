@@ -14,7 +14,7 @@ gen_le:{xs:params[x; y; 1]; tape[last y]:$[z[xs[0]; xs[1]]; 1; 0]; unit}
 
 op_add:{gen_am[x; y; sum]; unit}
 op_mul:{gen_am[x; y; prd]; unit}
-op_read:{x; y; 1">>> "; tape[first y]:"J"$read0 0; unit}
+op_read:{1">>> "; tape[first y]:"J"$read0 0; unit}
 op_show:{0N!resolve over x,y; unit}
 op_jit:{gen_jj[x; y; <>]}
 op_jif:{gen_jj[x; y; =]}
