@@ -14,7 +14,7 @@ calc:{[img] idx:xs?min xs:sum each {0=raze x} each img;
 color:{first x except 2}
 
 / rotate across dimensions then flatten, find top color, and reshape
-decode:{(height; width)#{first x except 2} each raze flip each flip x}
+decode:{(height; width)#color each raze flip each flip x}
 
 part1 calc image
 decode image
