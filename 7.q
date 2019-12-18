@@ -51,7 +51,7 @@ run:{tape::init;
  step scan 0;
  }
 
-/ permutations
+/ permutations 
 perm:{(1 0#x){raze(1 rotate)scan'x,'y}/x}
 
 thruster:{run each x; t:output; output::0; t}
