@@ -1,8 +1,9 @@
 \l 0.q
 init:("J"$) each "," vs (read0 `:7.txt)[0] / instruction data
-/init:("J"$) each "," vs "3,26,1001,26,-4,26,3,27,1002,27,2,27,1,27,26,27,4,27,1001,28,-1,28,1005,28,6,99,0,0,5"
 unit:-1
-
+amp:0#`
+n_amps:5
+switch:-2
 resolve:{[amp; mode; val] $[mode=1; val; get_idx[amp; val]]} / resolve position or immediate mode
 params:{[amp; x; y; z] (resolve[amp;;]/) each (neg z) _ flip (x; y)} / resolve first n params 
 
@@ -24,7 +25,6 @@ op_read:{[amp; x; y]
  mod_tape[amp; first y;] $[b:0b=get_prop[amp; `state]; get_prop[amp; `phase]; prev_out amp];
  if[b; toggle_amp[amp]]; unit}
 
-switch:-2
 op_show:{[amp; x; y] mod_prop[amp; `output;] resolve[amp;] over x,y; switch}
 
 / instruction table
@@ -65,9 +65,6 @@ prev_out:{[amp] get_prop[;`output] amps mod[;n_amps] -1+amps?amp}
 
 gen_amps:{[phases] (mk_amp .) each `a`b`c`d`e,'phases}
 next_amp:{[amp] amps mod[;n_amps] 1+amps?amp}
-
-amp:0#`
-n_amps:5
 
 perm:{(1 0#x){raze(1 rotate)scan'x,'y}/x}
 
