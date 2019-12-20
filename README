@@ -5,3 +5,11 @@ run each day with:
 $ q n.q
 
 where n is the day number.
+
+TODO:
+
+* refactor out IntCode computer
+* put all of day 7 in one file
+* finish day 14
+* do 15 part 1, clean up part 2
+* 
