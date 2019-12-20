@@ -3,8 +3,6 @@
 / Public domain as declared by Sturm Mabie
 \l 0.q
 init:("J"$) each "," vs (read0 `:9.txt)[0] / instruction data
-/init:("J"$) each "," vs "1102,34915192,34915192,7,4,7,99,0"
-/init:("J"$) each "," vs "109,1,204,-1,1001,100,1,100,1008,100,16,101,1006,101,0,99"
 unit:-1
 
 / resolve value parameters 
