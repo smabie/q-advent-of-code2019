@@ -1,10 +1,13 @@
+/ 7part2.q
+/ Advent of Code 2019
+/ Public domain as declared by Sturm Mabie
 \l 0.q
 init:("J"$) each "," vs (read0 `:7.txt)[0] / instruction data
 unit:-1
 amp:0#`
 n_amps:5
 switch:-2
-resolve:{[amp; mode; val] $[mode=1; val; get_idx[amp; val]]} / resolve position or immediate mode
+resolve:{[amp; mode; val] $[mode=1; val; get_tape[amp]val]} / resolve position or immediate mode
 params:{[amp; x; y; z] (resolve[amp;;]/) each (neg z) _ flip (x; y)} / resolve first n params 
 
 gen_am:{[amp; info; values; f] mod_tape[amp; last values;] f params[amp; info; values; 1]}
@@ -70,3 +73,4 @@ perm:{(1 0#x){raze(1 rotate)scan'x,'y}/x}
 
 find:{[xs] max {amps::gen_amps x; run `a} each xs}
 
+part2 find[perm 5 6 7 8 9]

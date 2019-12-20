@@ -58,3 +58,6 @@ thruster:{run each x; t:output; output::0; t}
 high_signal:{max thruster each x}
 
 part1 high_signal[perm 0 1 2 3 4]
+\l 7part2.q
+
+exit 0
