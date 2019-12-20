@@ -17,6 +17,7 @@ color:{first x except 2}
 decode:{(height; width)#color each raze flip each flip x}
 
 part1 calc image
+part2
 decode image
 
 exit 0
