@@ -135,3 +135,5 @@ brush:flip[order][0],'{shifted_color . x} each order
 
 part2 ""
 '[0N!; {{$[x; "#"; " "]} each x}] each reverse canvas;
+
+exit 0

@@ -53,3 +53,5 @@ search:{
 
 part1 run 1
 part2 @[;1] search over (1; floor mx%2; mx)
+
+exit 0

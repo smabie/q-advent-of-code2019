@@ -100,3 +100,5 @@ get_tape:{[amp; idx] extend_tape[amp; idx]; get[amp][`tape]idx}
 
 part1 run[]
 part2 run[]
+
+exit 0

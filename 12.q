@@ -36,3 +36,5 @@ total_cycle:{lcm {count single\[x]} each flip (flip x; flip y)}
 
 part1 energy[1000; pos; vel]
 part2 total_cycle[pos; vel]
+
+exit 0

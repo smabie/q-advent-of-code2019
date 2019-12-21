@@ -19,3 +19,5 @@ jumps:{min sum (x; y)?\:x inter y}
 
 part1 orbits[`COM; 0]
 part2 jumps[find[`COM; `YOU]; find[`COM; `SAN]]
+
+exit 0

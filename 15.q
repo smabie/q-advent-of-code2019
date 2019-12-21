@@ -130,3 +130,5 @@ advance:{n+:1; {.[`board; x; :; "O"]; x} each oxys,:new_oxygen x}
 
 advance over oxys;
 part2 n-1;
+
+exit 0

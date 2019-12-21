@@ -117,3 +117,5 @@ mk_tape `a;
 mod_tape[`a; 0; 0; 2];
 run `a;
 part2 max @[;0] flip (2_) each (3 cut buf);
+
+exit 0

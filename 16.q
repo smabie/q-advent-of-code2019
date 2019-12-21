@@ -24,3 +24,5 @@ find2:{[n; xs] ys:reverse (10 sv 7#xs) _ (10000*count xs)#xs;
 
 part1 find[100; input]
 part2 find2[100; input]
+
+exit 0
