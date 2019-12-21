@@ -123,7 +123,7 @@ board:{ssr[x; " "; "#"]} each {-30_ 29_ x} each -3_ 6_ board
 
 pos:key cdir
 oxys:enlist oxy:39 39
-n:n
+n:-1
 
 new_oxygen:{distinct raze {p where "."=(board .) each p:pos+\:x} each x}
 advance:{n+:1; {.[`board; x; :; "O"]; x} each oxys,:new_oxygen x}
